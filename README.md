@@ -1,117 +1,222 @@
-# Python Learning Journey
+# Python Learning Repository
 
-## About
+My Python learning projects and practical automation scripts for homelab & everyday use.
 
-This repository documents my Python learning progress during my Cloud IT Administrator certification (IHK, Germany). It contains self-developed projects that demonstrate fundamental programming concepts and practical automation skills relevant to cloud infrastructure and system administration.
-
-## Projects
-
-### Homelab Service Monitor ⭐
-
-**Status:** Fully self-developed  
-**Purpose:** Automated monitoring for critical homelab services (Nextcloud, Pi-hole, Tailscale)
-
-**Features:**
-- Real-time service health checks (CPU, RAM, uptime)
-- Automated alarm generation for critical thresholds
-- Statistical analysis and reporting
-- Comprehensive German documentation
-- Modular test suite included
-
-**Technologies:** Python 3, dictionaries, file I/O, datetime  
-**Files:** `homelab_service_monitor.py`, `homelab-service-test.py`
-
-**Key Learning Outcomes:**
-- Working with complex data structures (dictionaries)
-- Function design and modularity
-- Testing and validation methodologies
-- Documentation best practices
+**Author:** David Vaupel  
+**Status:** 🟢 Active Development  
+**Python Version:** 3.13+
 
 ---
 
-### Advanced Calculator
+## 📦 Project Structure
 
-**Status:** Self-developed  
-**Purpose:** Feature-rich calculator with business calculations
-
-**Features:**
-- Basic arithmetic operations (addition, subtraction, multiplication, division)
-- Advanced functions (square, square root)
-- Business calculations (discount, markup, percentage)
-- Input validation and error handling
-- Clean user interface with consistent formatting
-
-**Technologies:** Python 3, match-case statements, error handling  
-**File:** `taschenrechner_v4.py`
-
-**Key Learning Outcomes:**
-- Control flow and conditional logic
-- User input validation
-- Function organization
-- Error handling with try-except
+```
+python-learning/
+├── practical_automation/          # Homelab automation
+│   ├── __init__.py
+│   ├── homelab_service_monitor.py # Service monitoring for Raspberry Pi
+│   └── power_savings_tracker.py   # Power cost tracking
+├── calculator_evolution/          # Calculator project (learning)
+│   └── __init__.py
+├── testing/                       # Tests for all modules
+│   ├── __init__.py
+│   └── test.py
+├── setup.py                       # Package setup
+└── README.md
+```
 
 ---
 
-### Power Savings Calculator
+## 🚀 Installation & Setup
 
-**Status:** Self-developed  
-**Purpose:** Track solar power generation and calculate cost savings
+### Prerequisites
+- Python 3.13 or higher
+- pip (Python Package Manager)
 
-**Features:**
-- Daily power generation logging
-- Automatic cost calculation based on current electricity rates
-- CSV export for historical data tracking
-- Automatic header generation for new files
-- Input validation
+### Installation
 
-**Technologies:** Python 3, CSV handling, datetime, file operations  
-**File:** `Stromersparnisrechner_v1.py`
+```bash
+# Clone repository
+git clone https://github.com/MCCMDave/python-learning.git
+cd python-learning
 
-**Key Learning Outcomes:**
-- File operations and CSV handling
-- Data persistence
-- Date and time manipulation
-- Practical real-world application
+# Install package in development mode (recommended)
+pip install -e .
+```
 
-## Learning Context
-
-**Program:** Cloud IT Administrator (IHK Certification)  
-**Duration:** June 2025 - March 2026  
-**Current Module:** 2 of 4
-
-These projects complement my formal training by providing hands-on experience with:
-- Automation scripting
-- System monitoring concepts
-- Data handling and persistence
-- Problem-solving with code
-
-## Technologies Used
-
-- **Language:** Python 3.13
-- **Concepts:** Functions, dictionaries, lists, file I/O, error handling
-- **Tools:** VS Code, Git, WSL
-
-## Project Philosophy
-
-All projects in this repository follow these principles:
-- Write clean, readable code
-- Document thoroughly (especially for learning purposes)
-- Focus on practical, real-world applications
-- Build incrementally with testing
-
-## Future Plans
-
-- Expand homelab monitoring with Pi integration
-- Add automated reporting features
-- Implement data visualization
-- Develop backup automation scripts
-
-## Note on Code Comments
-
-Code comments are in German as this is primarily a learning project. This approach helps me internalize concepts in my native language while developing professional coding skills.
-
-## Contact
-
-For questions or collaboration opportunities, feel free to reach out via GitHub.
+**What does `pip install -e .` do?**
+- Installs the package as an editable/development package
+- Changes to code take effect immediately (no reinstallation needed)
+- Package can be imported from anywhere on the system
 
 ---
+
+## 💻 Usage
+
+### Importing Modules
+
+After installation with `pip install -e .`, you can import modules from anywhere:
+
+```python
+# Homelab Service Monitor
+from practical_automation.homelab_service_monitor import (
+    services,
+    service_check,
+    alarm_generator
+)
+
+# Power Savings Tracker
+from practical_automation.power_savings_tracker import track_savings
+
+# Example usage
+status = service_check("nextcloud")
+print(f"Nextcloud Status: {status}")
+```
+
+### Running Tests
+
+```bash
+# From main directory
+python testing/test.py
+
+# Or using Python module
+python -m testing.test
+```
+
+---
+
+## 📚 Modules & Features
+
+### 🏠 practical_automation
+
+#### homelab_service_monitor.py
+**Purpose:** Monitor critical services on Raspberry Pi 5 homelab
+
+**Features:**
+- Service status checks (Nextcloud, Pi-hole, Tailscale)
+- Alarm generation on failures
+- History tracking
+- Docker container monitoring
+
+**Services:**
+```python
+services = {
+    "nextcloud": "http://192.168.2.54:8080",
+    "pihole": "http://192.168.2.54/admin",
+    "tailscale": "http://100.103.86.47:8080"
+}
+```
+
+**Example:**
+```python
+from practical_automation.homelab_service_monitor import service_check
+
+# Check Nextcloud
+status = service_check("nextcloud")
+if not status:
+    print("⚠️ Nextcloud is down!")
+```
+
+#### power_savings_tracker.py
+**Purpose:** Track power cost savings
+
+**Features:**
+- Calculate savings
+- CSV export for analysis
+- Before/after optimization comparison
+
+---
+
+### 🧮 calculator_evolution
+
+**Purpose:** Learning project for Python fundamentals
+
+Different evolution stages of a calculator:
+- Simple calculations
+- Error handling
+- Advanced functions
+
+---
+
+## 🛠️ Tech Stack
+
+- **Python 3.13** - Main language
+- **Docker** - For service monitoring
+- **setuptools** - Package management
+- **pathlib** - Modern path handling
+
+---
+
+## 📖 Development
+
+### Code Conventions
+
+This project follows **PEP8** Python Style Guide:
+- ✅ `snake_case` for files, functions, variables
+- ✅ Package structure with `__init__.py`
+- ✅ Type hints (planned)
+- ✅ Docstrings for all functions
+
+### Extending the Project
+
+```bash
+# 1. Make changes to code
+# 2. No reinstallation needed (thanks to -e flag)
+# 3. Simply run your new code
+python your_script.py
+```
+
+---
+
+## 🔗 Related Projects
+
+- **[homelab-automation](https://github.com/MCCMDave/homelab-automation)** - Raspberry Pi 5 homelab setup
+- **[windows-automation](https://github.com/MCCMDave/windows-automation)** - Universal Update Manager v2.1
+
+---
+
+## 🎯 Roadmap
+
+- [ ] Unit tests with pytest
+- [ ] Type hints for all functions
+- [ ] CI/CD with GitHub Actions
+- [ ] Docker container for service monitor
+- [ ] Web dashboard for monitoring
+- [ ] Integrate logging framework
+
+---
+
+## 👨‍💻 Author
+
+**David Vaupel**
+- 🔗 [LinkedIn](https://www.linkedin.com/in/david-vaupel)
+- 💻 [GitHub](https://github.com/MCCMDave)
+- 📧 221494616+MCCMDave@users.noreply.github.com
+
+**Background:**
+- IHK Training: Cloud IT Administrator (Module 2/4)
+- 8.5 years Customer Service Experience (Amazon Prime Video, DKB Bank)
+- Goal: Customer Success Engineer (CSE) Position
+
+---
+
+## 📄 License
+
+Private Learning Repository - All Rights Reserved.
+
+---
+
+## 🙏 Acknowledgments
+
+This project was created as part of my Cloud IT Administrator training and serves as a practical portfolio project for CSE applications.
+
+**Special Thanks:**
+- Claude (Anthropic) - For support with code reviews and best practices
+- IHK Berlin - Training program
+- Raspberry Pi Community - For homelab inspiration
+
+---
+
+**Last Updated:** November 2025  
+**Version:** 1.0.0  
+**Status:** 🟢 Production Ready
