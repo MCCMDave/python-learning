@@ -76,7 +76,7 @@ This repository documents my Python learning progress during my Cloud IT Adminis
 ## Learning Context
 
 **Program:** Cloud IT Administrator (IHK Certification)  
-**Duration:** October 2024 - March 2026  
+**Duration:** June 2025 - March 2026  
 **Current Module:** 2 of 4
 
 These projects complement my formal training by providing hands-on experience with:
@@ -115,5 +115,3 @@ Code comments are in German as this is primarily a learning project. This approa
 For questions or collaboration opportunities, feel free to reach out via GitHub.
 
 ---
-
-**Last Updated:** November 2025
