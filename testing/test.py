@@ -6,7 +6,7 @@ Autor: Dave
 Datum: 07.11.2025
 """
 
-from homelab_service_monitor import (
+from practical_automation.homelab_service_monitor import (
     services,
     service_check,
     alarm_generator,
