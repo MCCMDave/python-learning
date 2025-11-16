@@ -92,7 +92,7 @@ Aufbauend auf Assignment 2 mit erweiterten Features:
 - JSON Import/Export
 - Score-Tracking und Highscores
 
-**[→ Zur Roadmap](docs/LEARNING-ROADMAP.md)**
+**[→ Zur Roadmap](LEARNING-ROADMAP.md)**
 
 ---
 

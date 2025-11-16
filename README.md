@@ -92,7 +92,7 @@ Building on Assignment 2 with advanced features:
 - JSON import/export
 - Score tracking and highscores
 
-**[→ View Roadmap](docs/LEARNING-ROADMAP.md)**
+**[→ View Roadmap](LEARNING-ROADMAP.md)**
 
 ---
 
