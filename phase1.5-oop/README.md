@@ -1,14 +1,18 @@
-# Phase 1.5: OOP-Grundlagen
+# Phase 1.5: OOP Fundamentals
 
-**Dauer:** 2 Wochen  
-**Fokus:** Objektorientierte Programmierung  
-**Status:** ✅ Abgeschlossen
+**[🇩🇪 Deutsche Version](README_DE.md)** | 🇬🇧 English Version
 
 ---
 
-## 📖 Übersicht
+**Duration:** 2 weeks  
+**Focus:** Object-Oriented Programming  
+**Status:** ✅ Completed
 
-Diese Phase diente der Einführung in objektorientierte Programmierung (OOP) mit zwei praktischen Assignments.
+---
+
+## 📖 Overview
+
+This phase introduced object-oriented programming (OOP) through two practical assignments that solve real-world problems.
 
 ---
 
@@ -16,94 +20,94 @@ Diese Phase diente der Einführung in objektorientierte Programmierung (OOP) mit
 
 ### Assignment 1: Homelab Service Monitor
 
-**Datei:** `assignment1_homelab_monitor.py`
+**File:** `assignment1_homelab_monitor.py`
 
-Ein Monitoring-System für Raspberry Pi Services mit Alarm-Funktion.
+A monitoring system for Raspberry Pi services with alarm functionality.
 
 **Features:**
-- Überwacht CPU, RAM und Laufzeit von Services
-- Generiert Alarme bei kritischen Werten
-- Berechnet Durchschnitts-Auslastung
-- Formatierte Konsolen-Ausgabe mit Rahmen
+- Monitors CPU, RAM, and uptime of services
+- Generates alarms for critical values
+- Calculates average resource usage
+- Formatted console output with borders
 
-**Genutzte OOP-Konzepte:**
-- Dictionaries für Service-Daten
-- Funktionen zur Modularisierung
-- Listen für Alarm-Historie
+**OOP Concepts Used:**
+- Dictionaries for service data
+- Functions for modularization
+- Lists for alarm history
 
-**Services im Monitor:**
-- Nextcloud (Cloud-Storage)
+**Monitored Services:**
+- Nextcloud (Cloud Storage)
 - Pi-hole (DNS Ad-Blocker)
 - Tailscale (VPN)
 
-**[Produktive Version →](https://github.com/MCCMDave/homelab-automation/tree/main/service-monitor)**
+**[Production Version →](https://github.com/MCCMDave/homelab-automation/tree/main/service-monitor)**
 
 ---
 
-### Assignment 2: Quiz-System für Linux Essentials
+### Assignment 2: Quiz System for Linux Essentials
 
-**Datei:** `assignment2_quiz_system.py`
+**File:** `assignment2_quiz_system.py`
 
-Ein interaktives Quiz-System zur Prüfungsvorbereitung mit OOP.
+An interactive quiz system for exam preparation with OOP.
 
 **Features:**
-- 10 Linux Essentials Fragen
-- Multiple-Choice Format (A-D)
-- Sofortiges Feedback
-- Score-System mit Prozentanzeige
-- Input-Validierung
+- 10 Linux Essentials questions
+- Multiple-choice format (A-D)
+- Instant feedback
+- Score system with percentage display
+- Input validation
 
-**OOP-Konzepte:**
-- ✅ Klasse `Frage` mit 4 Instanzattributen
-- ✅ Klassenattribut `anzahl_fragen`
-- ✅ 3 Instanzmethoden (zeige_frage, checke_antwort, zeige_antwort)
-- ✅ Konstruktor mit Fehlerbehandlung
-- ✅ 10 Frage-Objekte erstellt
+**OOP Concepts:**
+- ✅ Question class with 4 instance attributes
+- ✅ Class attribute `anzahl_fragen`
+- ✅ 3 instance methods (zeige_frage, checke_antwort, zeige_antwort)
+- ✅ Constructor with error handling
+- ✅ 10 Question objects created
 
-**Kategorien:**
-- Linux Evolution & Distributionen
+**Categories:**
+- Linux Evolution & Distributions
 - Open Source Software
-- Kommandozeile & Shell
-- Dateisystem & Verzeichnisse
-- System-Administration
+- Command Line & Shell
+- Filesystem & Directories
+- System Administration
 
-**Erweitert in:** [Phase 2 - Quiz-Engine](../phase2-quiz-engine/)
+**Extended in:** [Phase 2 - Quiz Engine](../phase2-quiz-engine/)
 
 ---
 
-## 💡 Was ich gelernt habe
+## 💡 What I Learned
 
-### OOP-Grundlagen:
-- **Klassen** als Baupläne für Objekte
-- **Objekte** als Instanzen einer Klasse
-- **self-Parameter** für Zugriff auf Instanzattribute
-- **Konstruktor** (`__init__`) zur Initialisierung
-- **Klassenattribute** vs. **Instanzattribute**
+### OOP Fundamentals:
+- **Classes** as blueprints for objects
+- **Objects** as instances of a class
+- **self parameter** for accessing instance attributes
+- **Constructor** (`__init__`) for initialization
+- **Class attributes** vs. **instance attributes**
 
 ### Best Practices:
-- Fehlerbehandlung im Konstruktor
-- Docstrings für Klassen und Methoden
-- Input-Validierung mit While-Schleifen
-- Code-Organisation in separate Funktionen
-- Formatierung für bessere Lesbarkeit
+- Error handling in constructor
+- Docstrings for classes and methods
+- Input validation with while loops
+- Code organization into separate functions
+- Formatting for better readability
 
-### Praktische Anwendung:
-- Wie OOP reale Probleme löst
-- Wann Klassen sinnvoll sind
-- Wie man Objekte erstellt und nutzt
+### Practical Application:
+- How OOP solves real problems
+- When classes make sense
+- How to create and use objects
 
 ---
 
 ## 🛠️ Tech Stack
 
 - Python 3.13
-- Objektorientierte Programmierung
+- Object-Oriented Programming
 - Standard Library (datetime, os)
 - Error Handling (ValueError)
 
 ---
 
-## 🚀 Ausführung
+## 🚀 Execution
 
 ### Assignment 1:
 ```bash
@@ -117,27 +121,27 @@ python assignment2_quiz_system.py
 
 ---
 
-## 📊 Erfolgs-Kriterien
+## 📊 Success Criteria
 
-- [x] Beide Assignments erfolgreich abgeschlossen
-- [x] OOP-Konzepte verstanden und angewendet
-- [x] Code sauber strukturiert und dokumentiert
-- [x] Funktionsfähige Programme ohne Bugs
-- [x] Praktische Anwendungen erstellt
+- [x] Both assignments successfully completed
+- [x] OOP concepts understood and applied
+- [x] Code cleanly structured and documented
+- [x] Functional programs without bugs
+- [x] Practical applications created
 
 ---
 
-## ➡️ Nächste Phase
+## ➡️ Next Phase
 
-**Phase 2: Quiz-Engine** mit erweiterten Features:
-- Zufällige Fragenauswahl
-- Kategorie-Filter
-- JSON Import/Export
-- Timer-System
+**Phase 2: Quiz Engine** with extended features:
+- Random question selection
+- Category filter
+- JSON import/export
+- Timer system
 - Highscores
 
 ---
 
-**Zeitaufwand:** ~2 Wochen  
-**Abgeschlossen:** November 2025  
-**Nächster Schritt:** Phase 2 - Quiz-Engine 🚀
+**Time Investment:** ~2 weeks  
+**Completed:** November 2025  
+**Next Step:** Phase 2 - Quiz Engine 🚀
