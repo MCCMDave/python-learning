@@ -10,7 +10,7 @@ An interactive quiz system for Linux Essentials 010-160 exam preparation with OO
 
 ## 🎯 Project Goal
 
-Building upon [Phase 1.5 (Assignment 2)](../phase-1.5-oop/assignment2_quiz_system.py), the quiz engine was enhanced with:
+Building upon [Phase 1.5 (Assignment 2)](../phase1.5-oop/assignment2_quiz_system.py), the quiz engine was enhanced with:
 - Separation of data (JSON) and logic (Python)
 - Random question and answer ordering
 - Multiple quiz modes (Learning, Exam, Custom)
